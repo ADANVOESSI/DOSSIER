@@ -11,6 +11,7 @@
         <a href="/about-us">A Propos</a>
         <a href="/articles">Articles</a>
         @yield('content')
+        
 
     </body>
 </html>

@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Article;
+use  App\Models\User;
+use App\Models\Comment;
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,5 +24,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        User::factory(5)->create();
+        Article::factory(10)->create();
+        Comment::factory(10)->create();
     }
 }

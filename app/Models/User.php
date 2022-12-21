@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'admin'
     ];
 
     /**
@@ -41,4 +42,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Un utilisateur écrit plusieurs articles
+    public function articles(){
+        return $this->hasMany(Article::class);
+    }
+    
+    // Un utilisateur écrit plusieurs commentaires
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+    // Un utilisateur n'a qu'un seul profil
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
 }
