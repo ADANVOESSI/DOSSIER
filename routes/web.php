@@ -42,6 +42,15 @@ Route::get('/articles/{id}', [ArticlesController::class, 'show']);
 
 Route::get('/article/{article}', [ArticlesController::class, 'show']);
 
+Route::get('/create', [ArticlesController::class, 'create']);
+
+Route::post('/articles/create', [ArticlesController::class, 'store']);
+
+Route::get('article/{article}/edit', [ArticlesController::class, 'edit']);
+
+Route::patch('/article/{article}/edit', [ArticlesController::class, 'update']);
+
+Route::delete('article/{article}/delete', [ArticlesController::class, 'delete']);
 
 
 

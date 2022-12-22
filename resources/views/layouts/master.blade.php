@@ -7,10 +7,13 @@
     </head>
     <body>
         <h1>Laravel 101</h1>
-        <a href="/contact-us">Contactez-nous</a>
-        <a href="/about-us">A Propos</a>
-        <a href="/articles">Articles</a>
+        <a href="/contact-us"><h2>Contactez-nous</h2></a>
+        <a href="/about-us"><h2>A Propos</h2></a>
+        <a href="/articles"><h2>Articles</h2></a>
+        <a href="/create"><h2>Contenu</h2></a>
+
         @yield('content')
+        @yield('titre')
         
 
     </body>
